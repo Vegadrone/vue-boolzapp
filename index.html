@@ -10,6 +10,11 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
 
+    <!-- FONT AWESOME IMPORT -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <!-- MY STYLE -->
     <link rel="stylesheet" href="./CSS/style.css">
 
@@ -27,9 +32,17 @@
                     <!-- USER MENÙ -->
                     <div class="col-4" id="user-menù">
                         <div class="row">
-                            <div class="col-12 user-bar py-4">Nome utente e icone</div>
+                            <div class="col-12 user-bar py-3 d-flex justify-content-between">
+                                <span>ICONA E NOME</span><span class="fs-5"><i
+                                        class="fa-solid fa-circle-notch px-2"></i><i
+                                        class="fa-solid fa-message px-2"></i><i
+                                        class="fa-solid fa-ellipsis-vertical px-2"></i></span>
+                            </div>
                             <div class="col-12 notifications-bar py-5">Ricevi notifiche nuovi messaggi</div>
-                            <div class="col-12 search-bar py-2">Barra di ricerca</div>
+                            <div class="col-12 search-bar py-2">
+                                <span><i class="fa-solid fa-magnifying-glass px-2"></i></span>
+                                <input type="text">
+                            </div>
                             <div class="col-12">
                                 <ul class="list-group">
                                     <li class="list-group-item py-4">Utente</li>
@@ -48,18 +61,34 @@
                     <!-- MESSAGE BOARD -->
                     <div class="col-8" id="message-board">
                         <div class="row">
-                            <div class="col-12 chat-user-bar py-4">Chat aperta nome utente e icone</div>
+                            <div class="col-12 chat-user-bar py-3 d-flex justify-content-between">
+                                <span>ICONA E NOME</span>
+                                <span class="fs-5">
+                                    <i class="fa-solid fa-magnifying-glass px-2"></i>
+                                    <i class="fa-solid fa-tag px-2"></i>
+                                    <i class="fa-solid fa-ellipsis-vertical px-2"></i>
+                                </span>
+                            </div>
                             <div class="col-12 message-box">
                                 <div class="row">
                                     <div class="col-6 sent-column">
-                                        <div class="message-sent">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquid, totam. Fuga earum non et ab sit quae ipsum ipsam, magnam deserunt. Hic amet asperiores possimus nam illum laboriosam, itaque aliquid.</div>
+                                        <div class="message-sent">Lorem ipsum, dolor sit amet consectetur adipisicing
+                                            elit. Aliquid, totam. Fuga earum non et ab sit quae ipsum ipsam, magnam
+                                            deserunt. Hic amet asperiores possimus nam illum laboriosam, itaque aliquid.
+                                        </div>
                                     </div>
                                     <div class="col-6 recived-column">
-                                        <div class="message-recived">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequatur cupiditate molestias adipisci numquam voluptatum quo id reprehenderit aspernatur magni, cumque ut, accusantium facilis!</div>
+                                        <div class="message-recived">Lorem ipsum dolor, sit amet consectetur adipisicing
+                                            elit. Consequatur cupiditate molestias adipisci numquam voluptatum quo id
+                                            reprehenderit aspernatur magni, cumque ut, accusantium facilis!</div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-12 message-bar py-3">Barra invio messaggi</div>
+                            <div class="col-12 message-bar py-3 d-flex justify-content-between">
+                                <span><i class="fa-regular fa-face-smile fs-4"></i></span>
+                                <input type="text">
+                                <span><i class="fa-solid fa-microphone fs-4"></i></span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -67,7 +96,7 @@
         </main>
     </div>
 
-    
+
     <!-- Vue 2.x import -->
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
 
