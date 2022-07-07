@@ -38,20 +38,19 @@ div.col-8{
 }
 
 .message-sent{
+    padding: 20px;
     background-color: white;
     width: 250px;
-    height: 50px;
     position: absolute;
     top:100px;
     left: 50px;
 }
 
-.messgae-recived{
-    background-color: green;
+.message-recived{
+    padding: 20px;
+    background-color: rgb(100, 225, 100);
     width: 250px;
-    height: 50px;
     position: absolute;
     top: 50px;
     right: 50px;
     }
-}
