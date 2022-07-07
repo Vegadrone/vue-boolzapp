@@ -10,11 +10,48 @@ body{
     background-color: rgb(246, 239, 230);
 }
 
-div.container{
-    border:1px solid rgb(0, 0, 0);
-}
-
+div.container,
 div.col-4,
 div.col-8{
     border: 1px solid rgb(0, 0, 0);
+}
+
+.user-bar,
+.chat-user-bar {
+    background-color: aquamarine;
+}
+.notifications-bar {
+    background-color: rgb(176, 255, 127);
+}
+.search-bar {
+    background-color: rgb(127, 150, 255);
+}
+
+.message-box{
+    background-color: rgb(246, 215, 255);
+    height: 700px;
+    position: relative;
+}
+
+.message-bar{
+    background-color: rgb(255, 224, 181);
+}
+
+.message-sent{
+    background-color: white;
+    width: 250px;
+    height: 50px;
+    position: absolute;
+    top:100px;
+    left: 50px;
+}
+
+.messgae-recived{
+    background-color: green;
+    width: 250px;
+    height: 50px;
+    position: absolute;
+    top: 50px;
+    right: 50px;
+    }
 }
