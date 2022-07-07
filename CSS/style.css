@@ -1,3 +1,12 @@
 body{
-    background-color: bisque;
+    background-color: rgb(48, 87, 54);
+}
+
+div.container{
+    border:3px solid rgb(78, 134, 87);
+}
+
+div.col-4,
+div.col-8{
+    border: 3px solid rgb(78, 134, 87);
 }
