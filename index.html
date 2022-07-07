@@ -45,14 +45,10 @@
                             </div>
                             <div class="col-12">
                                 <ul class="list-group">
-                                    <li class="list-group-item py-4">Utente</li>
-                                    <li class="list-group-item py-4">Utente</li>
-                                    <li class="list-group-item py-4">Utente</li>
-                                    <li class="list-group-item py-4">Utente</li>
-                                    <li class="list-group-item py-4">Utente</li>
-                                    <li class="list-group-item py-4">Utente</li>
-                                    <li class="list-group-item py-4">Utente</li>
-                                    <li class="list-group-item py-4">Utente</li>
+                                    <li class="list-group-item py-4" v-for="(contact,index) in contacts">
+                                        <img :src="getImgFullPath(index)" alt="contact-img">
+                                        {{contact.name}}
+                                    </li>
                                 </ul>
                             </div>
                         </div>
