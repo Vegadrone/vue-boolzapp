@@ -2,11 +2,19 @@ body{
     background-color: rgb(48, 87, 54);
 }
 
+#user-menù{
+    background-color: bisque;
+}
+
+#message-board{
+    background-color: rgb(246, 239, 230);
+}
+
 div.container{
-    border:3px solid rgb(78, 134, 87);
+    border:1px solid rgb(0, 0, 0);
 }
 
 div.col-4,
 div.col-8{
-    border: 3px solid rgb(78, 134, 87);
+    border: 1px solid rgb(0, 0, 0);
 }
