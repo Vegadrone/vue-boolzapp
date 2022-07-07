@@ -33,10 +33,17 @@
                     <div class="col-4" id="user-menù">
                         <div class="row">
                             <div class="col-12 user-bar py-3 d-flex justify-content-between">
-                                <span>ICONA E NOME</span><span class="fs-5"><i
+                                <div class="user-container d-flex">
+                                    <div class="avatar-container">
+                                        <img class="avatar" src="./img/avatar_io.jpg" alt="avatar_io">
+                                    </div>
+                                    <span class="fs-4 mt-3">Sofia</span>
+                                </div>
+                                <span class="fs-4 mt-3"><i
                                         class="fa-solid fa-circle-notch px-2"></i><i
                                         class="fa-solid fa-message px-2"></i><i
-                                        class="fa-solid fa-ellipsis-vertical px-2"></i></span>
+                                        class="fa-solid fa-ellipsis-vertical px-2"></i>
+                                    </span>
                             </div>
                             <div class="col-12 notifications-bar py-5">Ricevi notifiche nuovi messaggi</div>
                             <div class="col-12 search-bar py-2">
@@ -45,9 +52,11 @@
                             </div>
                             <div class="col-12">
                                 <ul class="list-group">
-                                    <li class="list-group-item py-4" v-for="(contact,index) in contacts">
-                                        <img :src="getImgFullPath(index)" alt="contact-img">
-                                        {{contact.name}}
+                                    <li class="list-group-item py-4 d-flex" v-for="(contact,index) in contacts">
+                                        <div class="avatar-container">
+                                            <img class="avatar" :src="getImgFullPath(index)" :alt="contacts.avatar">
+                                        </div>
+                                        <span class="fs-5">{{contact.name}}</span>
                                     </li>
                                 </ul>
                             </div>
@@ -58,8 +67,13 @@
                     <div class="col-8" id="message-board">
                         <div class="row">
                             <div class="col-12 chat-user-bar py-3 d-flex justify-content-between">
-                                <span>ICONA E NOME</span>
-                                <span class="fs-5">
+                                <div class="user-container d-flex">
+                                    <div class="avatar-container">
+                                        <img class="avatar" :src="getImgFullPath(currentSelectedChat)" alt="contacts.avatar">
+                                    </div>
+                                    <span class="fs-4">{{contacts[currentSelectedChat].name}}</span>
+                                </div>
+                                <span class="fs-4 mt-3">
                                     <i class="fa-solid fa-magnifying-glass px-2"></i>
                                     <i class="fa-solid fa-tag px-2"></i>
                                     <i class="fa-solid fa-ellipsis-vertical px-2"></i>
