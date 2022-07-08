@@ -7,9 +7,12 @@ body{
 }
 .user-bar,
 .chat-user-bar,
-.message-bar,
-.search-bar {
+.message-bar {
     background-color: rgb(236, 236, 236);
+}
+
+.user-bar{
+    border-right: 2px solid rgb(216, 216, 216);
 }
 
 ul.list-group{
@@ -73,6 +76,10 @@ li {
 
 .message-bar input{
     width: 100%;
+    border: none;
+}
+.search-bar input{
+    width: 85%;
     border: none;
 }
 
