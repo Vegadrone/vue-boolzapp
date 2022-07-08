@@ -6,7 +6,7 @@ const app = new Vue(
 
             currentSelectedChat: 0,
             newUserMessage: "",
-
+           
             contacts: [
                 {
                     name: 'Michele',
@@ -193,7 +193,18 @@ const app = new Vue(
                     status: 'sent'
                 });
                 this.newUserMessage = "";
+
+                setTimeout(this.respondingAI, 1000)
+
             },
+
+            respondingAI(){
+                this.contacts[this.currentSelectedChat].messages.push({
+                    date: Date.now(),
+                    message: 'Ok!',
+                    status: 'received'
+                });
+            }
         }
     }
 )

@@ -85,19 +85,15 @@
                                     <div class="col-12 selected-conversation-messages">
                                         <div class="message"
                                             v-for="(message, index) in contacts[currentSelectedChat].messages">
-                                            <div class="message-baloon"
-                                                :class="
-                                            {'message-sent' : contacts[currentSelectedChat].messages[index].status === 'sent',
-                                            'message-received' : contacts[currentSelectedChat].messages[index].status === 'received'}">
-                                                {{message.message}}</div>
-
+                                            <div class="message-baloon" :class="{'message-sent':contacts[currentSelectedChat].messages[index].status === 'sent',
+                                            'message-received':contacts[currentSelectedChat].messages[index].status === 'received'}">{{message.message}}</div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-12 message-bar py-3 d-flex justify-content-between">
                                 <span><i class="fa-regular fa-face-smile fs-4 mx-3"></i></span>
-                                <input type="text" v-model="newUserMessage" placeholder="Scrivi un messaggio" @keyup.enter="addNewMessage()">
+                                <input type="text" v-model="newUserMessage" placeholder="Scrivi un messaggio" @keyup.enter="addNewMessage">
                                 <span><i class="fa-solid fa-microphone fs-4 mx-3"></i></span>
                             </div>
                         </div>
