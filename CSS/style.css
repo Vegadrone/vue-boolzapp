@@ -12,8 +12,12 @@ body{
     background-color: rgb(236, 236, 236);
 }
 
-ul.list-group{
+/* ul.list-group{
     overflow-y: scroll;
+} */
+
+li {
+    cursor: pointer;
 }
 
 .notifications-bar {
@@ -24,7 +28,7 @@ ul.list-group{
     background-image: url(../img/mine.jpg);
     height: 1000px;
     position: relative;
-    overflow-y: scroll;
+    /* overflow-y: scroll; */
 }
 
 .message-sent {

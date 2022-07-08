@@ -175,6 +175,10 @@ const app = new Vue(
 
             getImgFullPath(indexOfContact){
                return './img/avatar' + this.contacts[indexOfContact].avatar + '.jpg';
+            },
+
+            chatSelection(indexOfContact){
+                this.currentSelectedChat = indexOfContact;
             }
 
         }
