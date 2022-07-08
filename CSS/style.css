@@ -28,31 +28,34 @@ li {
     background-image: url(../img/mine.jpg);
     height: 1100px;
     position: relative;
-    /* overflow-y: scroll; */
+    overflow-y: scroll;
+    overflow-x:hidden;
 }
-
-/* .clearfix::after {
-    content: "";
-    clear: both;
-    display: table;
-} */
 
 .message-sent {
     padding: 20px;
-    background-color: rgb(100, 225, 100);
-    width: 250px;
+    background-color: #bfee90;
+    width: 350px;
+    border-radius: 20px;
+    margin: 20px;
+    position: relative;
+    left: 470px;
+    
 }
 
 .message-received {
     padding: 20px;
-    background-color: white;
-    width: 250px;
+    background-color: #fbf2f2;
+    width: 350px;
+    border-radius: 20px;
+    margin: 20px;
 }
 
 .avatar-container{
     width: 60px;
     height: 60px;
     margin-right: 10px;
+    
     
 }
 
