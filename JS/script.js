@@ -5,6 +5,7 @@ const app = new Vue(
         data: {
 
             currentSelectedChat: 0,
+            statusSelection: 2,
 
             contacts: [
                 {
@@ -183,6 +184,10 @@ const app = new Vue(
 
             chatSelection(indexOfContact){
                 this.currentSelectedChat = indexOfContact;
+            },
+
+            sentOrReceived(){
+                if
             }
 
         }
