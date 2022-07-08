@@ -6,6 +6,7 @@ const app = new Vue(
 
             currentSelectedChat: 0,
             newUserMessage: "",
+            searchBar:"",
            
             contacts: [
                 {
@@ -201,7 +202,7 @@ const app = new Vue(
             respondingAI(){
                 this.contacts[this.currentSelectedChat].messages.push({
                     date: Date.now(),
-                    message: 'Ok!',
+                    message: "Ok!",
                     status: 'received'
                 });
             }
