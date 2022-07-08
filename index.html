@@ -85,8 +85,8 @@
                                 <div class="row">
                                   <div class="col-12 selected-conversation-messages">
                                     <div class="message" v-for="(message) in contacts[currentSelectedChat].messages">
-                                        <div class="message-sent">{{message.message}}</div>
-                                        <div class="message-recived">{{message.message}}</div>
+                                        <div :class="{'message-sent': contacts[currentSelectedChat].messages.status === sent}">{{message.message}}</div>
+                                        
                                     </div>
                                   </div>
                                 </div>
