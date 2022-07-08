@@ -37,11 +37,6 @@ li {
     display: table;
 }
 
-.message-bar {
-    position:absolute;
-    bottom:0;
-}
-
 .message-sent {
     padding: 20px;
     background-color: rgb(100, 225, 100);

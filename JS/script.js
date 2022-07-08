@@ -173,6 +173,10 @@ const app = new Vue(
 
         methods:{
 
+            consoleLog(arg){
+                console.log(arg);
+            },
+
             getImgFullPath(indexOfContact){
                return './img/avatar' + this.contacts[indexOfContact].avatar + '.jpg';
             },
