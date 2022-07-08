@@ -26,27 +26,34 @@ li {
 
 .message-box{
     background-image: url(../img/mine.jpg);
-    height: 1000px;
+    height: 1100px;
     position: relative;
     /* overflow-y: scroll; */
 }
 
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.message-bar {
+    position:absolute;
+    bottom:0;
+}
+
 .message-sent {
     padding: 20px;
-    background-color: white;
+    background-color: rgb(100, 225, 100);
     width: 250px;
-    position: absolute;
-    top:100px;
-    left: 50px;
+    float: right;
 }
 
 .message-recived {
     padding: 20px;
-    background-color: rgb(100, 225, 100);
+    background-color: white;
     width: 250px;
-    position: absolute;
-    top: 50px;
-    right: 50px;
+    float: left;
 }
 
 .avatar-container{
@@ -67,3 +74,4 @@ li {
 .fa-regular{
     color: rgb(159, 157, 157);
 }
+
