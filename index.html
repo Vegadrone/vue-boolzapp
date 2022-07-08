@@ -97,7 +97,7 @@
                             </div>
                             <div class="col-12 message-bar py-3 d-flex justify-content-between">
                                 <span><i class="fa-regular fa-face-smile fs-4 mx-3"></i></span>
-                                <input type="text" v-model="newUserMessage" placeholder="Scrivi un messaggio">
+                                <input type="text" v-model="newUserMessage" placeholder="Scrivi un messaggio" @keyup.enter="addNewMessage()">
                                 <span><i class="fa-solid fa-microphone fs-4 mx-3"></i></span>
                             </div>
                         </div>

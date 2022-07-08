@@ -186,9 +186,14 @@ const app = new Vue(
                 this.currentSelectedChat = indexOfContact;
             },
 
-
-
-
+            addNewMessage(){
+                this.contacts[this.currentSelectedChat].messages.push({
+                    date: Date.now(),
+                    message: this.newUserMessage,
+                    status: 'sent'
+                });
+                this.newUserMessage = "";
+            },
         }
     }
 )
