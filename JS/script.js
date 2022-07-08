@@ -5,7 +5,7 @@ const app = new Vue(
         data: {
 
             currentSelectedChat: 0,
-            statusSelection: 2,
+            newUserMessage: "",
 
             contacts: [
                 {
@@ -174,8 +174,8 @@ const app = new Vue(
 
         methods:{
 
-            consoleLog(arg){
-                console.log(arg);
+            consoleLog(...args){
+                console.log(...args);
             },
 
             getImgFullPath(indexOfContact){
@@ -185,6 +185,7 @@ const app = new Vue(
             chatSelection(indexOfContact){
                 this.currentSelectedChat = indexOfContact;
             },
+
 
 
 

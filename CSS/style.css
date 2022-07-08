@@ -12,9 +12,10 @@ body{
     background-color: rgb(236, 236, 236);
 }
 
-/* ul.list-group{
+ul.list-group{
+    height: 550px;
     overflow-y: scroll;
-} */
+}
 
 li {
     cursor: pointer;
@@ -26,7 +27,7 @@ li {
 
 .message-box{
     background-image: url(../img/mine.jpg);
-    height: 1100px;
+    height: 700px;
     position: relative;
     overflow-y: scroll;
     overflow-x:hidden;
@@ -68,5 +69,10 @@ li {
 .fa-solid,
 .fa-regular{
     color: rgb(159, 157, 157);
+}
+
+.message-bar input{
+    width: 100%;
+    border: none;
 }
 
