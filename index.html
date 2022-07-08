@@ -85,7 +85,7 @@
                                     <div class="col-12 selected-conversation-messages">
                                         <div class="message"
                                             v-for="(message, index) in contacts[currentSelectedChat].messages">
-                                            <div class="clearfix"
+                                            <div class="message-baloon"
                                                 :class="
                                             {'message-sent' : contacts[currentSelectedChat].messages[index].status === 'sent',
                                             'message-received' : contacts[currentSelectedChat].messages[index].status === 'received'}">

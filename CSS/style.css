@@ -32,23 +32,22 @@ li {
     overflow-x:hidden;
 }
 
-.message-sent {
+.message-baloon{
     padding: 20px;
-    background-color: #bfee90;
     width: 350px;
     border-radius: 20px;
     margin: 20px;
+}
+
+.message-sent {
+    background-color: #bfee90;
     position: relative;
     left: 470px;
     
 }
 
 .message-received {
-    padding: 20px;
     background-color: #fbf2f2;
-    width: 350px;
-    border-radius: 20px;
-    margin: 20px;
 }
 
 .avatar-container{
