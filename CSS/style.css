@@ -31,24 +31,22 @@ li {
     /* overflow-y: scroll; */
 }
 
-.clearfix::after {
+/* .clearfix::after {
     content: "";
     clear: both;
     display: table;
-}
+} */
 
 .message-sent {
     padding: 20px;
     background-color: rgb(100, 225, 100);
     width: 250px;
-    float: right;
 }
 
 .message-recived {
     padding: 20px;
     background-color: white;
     width: 250px;
-    float: left;
 }
 
 .avatar-container{
