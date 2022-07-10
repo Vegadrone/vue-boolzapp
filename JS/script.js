@@ -205,7 +205,30 @@ const app = new Vue(
                     message: "Ok!",
                     status: 'received'
                 });
-            }
+            },
+
+            searchContact() {
+                for (let i = 0; i < this.contacts.length; i++) {
+                    const lowercaseSearchedWord = this.searchBar.toLowerCase();
+                    const lowercaseContactName = this.contacts[i].name.toLowerCase();
+
+                    if(lowercaseSearchedWord ===""){
+                        this.contacts[i].visible = true;
+                    } else {
+                        if (!lowercaseContactName.includes(lowercaseSearchedWord)) {
+                            this.contacts[i].visible = false;
+                        } else {
+                            this.contacts[i].visible = true;
+                        }
+                    }
+                }
+            },
+
+            deleteMessage(messageToDelete){
+                this.contacts[this.currentSelectedChat].messages.splice(this.contacts[this.currentSelectedChat].messages.indexOf(messageToDelete), 1);
+                console.log('cliccato') 
+            },
+            
         }
     }
 )

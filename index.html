@@ -26,7 +26,7 @@
     <!-- VUE ROOT -->
     <div id="root">
         <main>
-            <div class="container mt-5">
+            <div class="container my-5">
                 <div class="row">
 
                     <!-- USER MENÙ -->
@@ -56,7 +56,7 @@
                             </div>
                             <div class="col-12 col-lg-12 col-md-12 search-bar fs-4 py-2">
                                 <span><i class="fa-solid fa-magnifying-glass px-2"></i></span>
-                                <input class="fs-5" type="text" v-model="searchBar" placeholder="Cerca o inizia una nuova chat">
+                                <input class="fs-5" type="text" v-model="searchBar" @keyup.enter="searchContact()" placeholder="Cerca o inizia una nuova chat">
                             </div>
                             <div class="col-12 col-lg-12 col-md-12 g-0">
                                 <ul class="list-group">
@@ -66,8 +66,7 @@
                                             <img class="avatar" :src="getImgFullPath(index)" :alt="contacts.avatar">
                                         </div>
                                        <div>
-                                            <span class="fs-5">{{contact.name}}</span>
-                                            <span class="fs-5"></span>
+                                            <span class="fs-5" :v-show="contacts.visible === true">{{contact.name}}</span>
                                         </div>
                                     </li>
                                 </ul>
@@ -98,7 +97,11 @@
                                         <div class="message"
                                             v-for="(message, index) in contacts[currentSelectedChat].messages">
                                             <div class="message-baloon" :class="{'message-sent':contacts[currentSelectedChat].messages[index].status === 'sent',
-                                            'message-received':contacts[currentSelectedChat].messages[index].status === 'received'}">{{message.message}}</div>
+                                            'message-received':contacts[currentSelectedChat].messages[index].status === 'received'}" @click="deleteMessage(message)">{{message.message}}</div>
+                                            <div class="menù-on-click p-2">
+                                                <span class="dropdown delete ">Cancella</span>
+                                                <span class="dropdown pin">Importante</span>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>

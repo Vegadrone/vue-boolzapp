@@ -1,5 +1,8 @@
 body{
-    background-color: rgb(48, 87, 54);
+background-image: linear-gradient( rgb(2, 94, 26) 20vh, rgb(194, 194, 194) 0vh);
+background-size: contain;
+background-repeat: no-repeat;
+overflow: hidden;
 }
 
 #user-menù{
@@ -24,7 +27,8 @@ ul.list-group{
     overflow-y: scroll;
 }
 
-li {
+li,
+.dropdown {
     cursor: pointer;
 }
 
@@ -38,7 +42,7 @@ li {
 
 .message-baloon{
     padding: 20px;
-    width: 350px;
+    width: 380px;
     border-radius: 20px;
     margin: 20px;
 }
@@ -46,12 +50,16 @@ li {
 .message-sent {
     background-color: #bfee90;
     position: relative;
-    left: 470px;
-    
+    left: 460px;
 }
 
 .message-received {
     background-color: #fbf2f2;
+}
+
+.menù-on-click{       
+    background-color: #fff;
+    width: 100px;
 }
 
 .avatar-container{
