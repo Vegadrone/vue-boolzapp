@@ -94,13 +94,14 @@
                             <div class="col-12 col-lg-12 col-md-12 g-0 message-box">
                                 <div class="row">
                                     <div class="col-12 col-lg-12 col-md-12 selected-conversation-messages">
+                                        <div class="pinned-messages-bar">{{pinnedMessage}}</div>
                                         <div class="message"
                                             v-for="(message, index) in contacts[currentSelectedChat].messages">
                                             <div class="message-baloon" :class="{'message-sent':contacts[currentSelectedChat].messages[index].status === 'sent',
-                                            'message-received':contacts[currentSelectedChat].messages[index].status === 'received'}" @click="deleteMessage(message)">{{message.message}}</div>
+                                            'message-received':contacts[currentSelectedChat].messages[index].status === 'received'}">{{message.message}}</div>
                                             <div class="menù-on-click p-2">
-                                                <span class="dropdown delete ">Cancella</span>
-                                                <span class="dropdown pin">Importante</span>
+                                                <span class="dropdown delete" @click="deleteMessage(message)">Cancella</span>
+                                                <span class="dropdown pin" @click="pinMessage(index)">Importante</span>
                                             </div>
                                         </div>
                                     </div>

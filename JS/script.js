@@ -7,6 +7,7 @@ const app = new Vue(
             currentSelectedChat: 0,
             newUserMessage: "",
             searchBar:"",
+            pinnedMessage: "",
            
             contacts: [
                 {
@@ -201,7 +202,7 @@ const app = new Vue(
 
             respondingAI(){
                 this.contacts[this.currentSelectedChat].messages.push({
-                    date: Date.now(),
+                    date: date,
                     message: "Ok!",
                     status: 'received'
                 });
@@ -212,13 +213,13 @@ const app = new Vue(
                     const lowercaseSearchedWord = this.searchBar.toLowerCase();
                     const lowercaseContactName = this.contacts[i].name.toLowerCase();
 
-                    if(lowercaseSearchedWord ===""){
+                    if(lowercaseSearchedWord === ""){
                         this.contacts[i].visible = true;
                     } else {
-                        if (!lowercaseContactName.includes(lowercaseSearchedWord)) {
-                            this.contacts[i].visible = false;
-                        } else {
+                        if (lowercaseContactName.includes(lowercaseSearchedWord)) {
                             this.contacts[i].visible = true;
+                        } else {
+                            this.contacts[i].visible = false;
                         }
                     }
                 }
@@ -226,8 +227,15 @@ const app = new Vue(
 
             deleteMessage(messageToDelete){
                 this.contacts[this.currentSelectedChat].messages.splice(this.contacts[this.currentSelectedChat].messages.indexOf(messageToDelete), 1);
-                console.log('cliccato') 
             },
+
+            pinMessage(indexOf){
+                let newPinnedMessage = `${this.contacts[this.currentSelectedChat].messages[indexOf].date} - 
+                                        ${this.contacts[this.currentSelectedChat].name} - 
+                                        ${this.contacts[this.currentSelectedChat].messages[indexOf].message}`
+                this.pinnedMessage = newPinnedMessage;
+
+            }
             
         }
     }

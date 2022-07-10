@@ -40,7 +40,22 @@ li,
     overflow-x:hidden;
 }
 
+.message {
+    margin-top: 60px;
+}
+
+.pinned-messages-bar{
+    background-color: rgb(212, 212, 212);
+    width: 863px;
+    height: 50px;
+    padding: 10px;
+    color:rgb(2, 94, 26);
+    position: fixed;
+    z-index: 1;
+}
+
 .message-baloon{
+    margin-top: 0px;
     padding: 20px;
     width: 380px;
     border-radius: 20px;
@@ -50,7 +65,7 @@ li,
 .message-sent {
     background-color: #bfee90;
     position: relative;
-    left: 460px;
+    left: 440px;
 }
 
 .message-received {
@@ -111,17 +126,15 @@ li,
 @media (max-width: 1400px){
     
     .message-baloon {
-            padding: 20px;
             width: 320px;
-            border-radius: 20px;
-            margin: 20px;
         }
     
         .message-sent {
-            background-color: #bfee90;
-            position: relative;
-            left: 400px;
-    
+            left: 380px;
+        }
+
+        .pinned-messages-bar {
+            width: 743px;
         }
 
 }
@@ -129,17 +142,15 @@ li,
 @media (max-width: 1200px) {
 
     .message-baloon {
-            padding: 20px;
             width: 280px;
-            border-radius: 20px;
-            margin: 20px;
         }
     
         .message-sent {
-            background-color: #bfee90;
-            position: relative;
-            left: 320px;
-    
+            left: 300px;
+        }
+
+        .pinned-messages-bar {
+            width: 623px;
         }
 }
 
@@ -150,7 +161,6 @@ li,
 
     .search-bar input {
         width: 60%;
-        border: none;
     }
 
     .fa-caret-down{
@@ -168,17 +178,15 @@ li,
     }
 
     .message-baloon {
-        padding: 20px;
         width: 200px;
-        border-radius: 20px;
-        margin: 20px;
     }
 
     .message-sent {
-        background-color: #bfee90;
-        position: relative;
-        left: 240px;
+        left: 220px;
+    }
 
+    .pinned-messages-bar {
+        width: 463px;
     }
 
 }
@@ -199,7 +207,6 @@ li,
 
     .search-bar input {
         width: 60%;
-        border: none;
     }
 
     .message-baloon {
@@ -210,9 +217,10 @@ li,
     }
 
     .message-sent {
-        background-color: #bfee90;
-        position: relative;
-        left: 170px;
-
+        left: 150px;
     }
+
+        .pinned-messages-bar {
+            width: 343px;
+        }
 }
