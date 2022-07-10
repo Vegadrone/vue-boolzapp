@@ -220,7 +220,8 @@ li,
         left: 150px;
     }
 
-        .pinned-messages-bar {
-            width: 343px;
-        }
+    .pinned-messages-bar {
+        width: 343px;
+        font-size: 0.8rem;
+    }
 }

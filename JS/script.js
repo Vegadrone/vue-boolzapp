@@ -8,6 +8,7 @@ const app = new Vue(
             newUserMessage: "",
             searchBar:"",
             pinnedMessage: "",
+            isClicked: false,
            
             contacts: [
                 {
@@ -202,7 +203,7 @@ const app = new Vue(
 
             respondingAI(){
                 this.contacts[this.currentSelectedChat].messages.push({
-                    date: date,
+                    date: Date.now(),
                     message: "Ok!",
                     status: 'received'
                 });
@@ -231,7 +232,7 @@ const app = new Vue(
 
             pinMessage(indexOf){
                 let newPinnedMessage = `${this.contacts[this.currentSelectedChat].messages[indexOf].date} - 
-                                        ${this.contacts[this.currentSelectedChat].name} - 
+                                        ${this.contacts[this.currentSelectedChat].name} -
                                         ${this.contacts[this.currentSelectedChat].messages[indexOf].message}`
                 this.pinnedMessage = newPinnedMessage;
 
