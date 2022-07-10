@@ -15,6 +15,10 @@ body{
     border-right: 2px solid rgb(216, 216, 216);
 }
 
+.fa-caret-down{
+    display: none;
+}
+
 ul.list-group{
     height: 550px;
     overflow-y: scroll;
@@ -22,10 +26,6 @@ ul.list-group{
 
 li {
     cursor: pointer;
-}
-
-.notifications-bar {
-    background-color: rgb(127, 219, 255);
 }
 
 .message-box{
@@ -58,8 +58,6 @@ li {
     width: 60px;
     height: 60px;
     margin-right: 10px;
-    
-    
 }
 
 .avatar{
@@ -71,7 +69,7 @@ li {
 
 .fa-solid,
 .fa-regular{
-    color: rgb(159, 157, 157);
+    color: rgb(188, 188, 188);
 }
 
 .message-bar input{
@@ -83,3 +81,130 @@ li {
     border: none;
 }
 
+.notifications-bar {
+    background-color: rgb(127, 219, 255);
+}
+
+.notifications-bar-link {
+    color:gray;
+}
+
+.fa-bell-slash {
+    color: rgb(127, 219, 255);
+    margin-right: 10px;
+    padding: 18px 16px;
+    background-color: #fbf2f2;
+    border-radius: 80px;
+}
+
+
+/* ***************** MEDIA QUERIES ****************** */
+
+@media (max-width: 1400px){
+    
+    .message-baloon {
+            padding: 20px;
+            width: 320px;
+            border-radius: 20px;
+            margin: 20px;
+        }
+    
+        .message-sent {
+            background-color: #bfee90;
+            position: relative;
+            left: 400px;
+    
+        }
+
+}
+
+@media (max-width: 1200px) {
+
+    .message-baloon {
+            padding: 20px;
+            width: 280px;
+            border-radius: 20px;
+            margin: 20px;
+        }
+    
+        .message-sent {
+            background-color: #bfee90;
+            position: relative;
+            left: 320px;
+    
+        }
+}
+
+@media (max-width: 992px) {
+    .notifications-bar-text {
+        font-size: 0.8rem;
+    }
+
+    .search-bar input {
+        width: 60%;
+        border: none;
+    }
+
+    .fa-caret-down{
+        display: block;
+    }
+
+    .avatar-user,
+    .user-name,
+    .fa-caret-down{
+        margin-left: 10px;
+    }
+
+    .user-bar-icons{
+        display:none;
+    }
+
+    .message-baloon {
+        padding: 20px;
+        width: 200px;
+        border-radius: 20px;
+        margin: 20px;
+    }
+
+    .message-sent {
+        background-color: #bfee90;
+        position: relative;
+        left: 240px;
+
+    }
+
+}
+
+@media (max-width: 768px) {
+    .notifications-bar-text {
+        display: none;
+    }
+
+    .fa-bell-slash {
+        color: rgb(127, 219, 255);
+        margin-left: 50px;
+        padding: 18px 16px;
+        background-color: #fbf2f2;
+        border-radius: 80px;
+        
+    }
+
+    .search-bar input {
+        width: 60%;
+        border: none;
+    }
+
+    .message-baloon {
+        padding: 20px;
+        width: 150px;
+        border-radius: 20px;
+        margin: 20px;
+    }
+
+    .message-sent {
+        background-color: #bfee90;
+        position: relative;
+        left: 170px;
+
+    }
+}
