@@ -8,7 +8,8 @@ const app = new Vue(
             newUserMessage: "",
             searchBar:"",
             pinnedMessage: "",
-            isClicked: false,
+            selectedMessage:0,
+            
            
             contacts: [
                 {
@@ -240,8 +241,7 @@ const app = new Vue(
                                         ${this.contacts[this.currentSelectedChat].messages[indexOf].message}`
                 this.pinnedMessage = newPinnedMessage;
 
-            }
-            
+            },
         }
     }
 )

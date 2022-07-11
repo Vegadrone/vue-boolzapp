@@ -27,17 +27,13 @@ ul.list-group{
     overflow-y: scroll;
 }
 
-.display{
-    display: block;
-}
-
-.display-none {
-    display: none;
-}
-
 li,
-.dropdown {
+.dropdown-toggle{
     cursor: pointer;
+}
+
+.dropdown-toggle{
+    color:gray
 }
 
 .message-box{
@@ -143,7 +139,7 @@ li,
             width: 320px;
         }
     
-        .message-sent {
+        .sent {
             left: 380px;
         }
 
@@ -159,7 +155,7 @@ li,
             width: 280px;
         }
     
-        .message-sent {
+        .sent {
             left: 300px;
         }
 
@@ -195,7 +191,7 @@ li,
         width: 200px;
     }
 
-    .message-sent {
+    .sent {
         left: 220px;
     }
 
@@ -230,7 +226,7 @@ li,
         margin: 20px;
     }
 
-    .message-sent {
+    .sent {
         left: 150px;
     }
 

@@ -62,7 +62,8 @@
                             <div class="col-12 col-lg-12 col-md-12 g-0">
                                 <ul class="list-group">
                                     <li class="list-group-item list-group-item-action py-4 d-flex"
-                                        v-for="(contact,index) in contacts" v-if="contact.visible" @click="chatSelection(index)">
+                                        v-for="(contact,index) in contacts" v-if="contact.visible"
+                                        @click="chatSelection(index)">
                                         <div class="avatar-container">
                                             <img class="avatar" :src="getImgFullPath(index)" :alt="contacts.avatar">
                                         </div>
@@ -98,14 +99,19 @@
                                         <div class="pinned-messages-bar">{{pinnedMessage}}</div>
                                         <div class="message"
                                             v-for="(message, index) in contacts[currentSelectedChat].messages">
-                                            <div class="message-baloon"
-                                                :class="message.status">
-                                                {{message.message}}</div>
-                                            <div :class="message.status"
-                                                class="menù-on-click p-2">
-                                                <span class="dropdown delete"
-                                                    @click="deleteMessage(index)">Cancella</span>
-                                                <span class="dropdown pin" @click="pinMessage(index)">Importante</span>
+                                            <div class="message-baloon d-flex" :class="message.status">
+                                                <div class="dropdown">
+                                                    <a class="dropdown-toggle fs-5 mx-2" id="dropdownMenuButton1"
+                                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                                    </a>
+                                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                                        <li><a class="dropdown-item" @click="deleteMessage(index)"
+                                                                href="#">Cancella</a></li>
+                                                        <li><a class="dropdown-item" @click="pinMessage(index)" href="
+                                                                #">Importante</a></li>
+                                                    </ul>
+                                                </div>
+                                                {{message.message}}
                                             </div>
                                         </div>
                                     </div>
@@ -127,6 +133,11 @@
 
     <!-- Vue 2.x import -->
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+
+    <!-- BOOTSTRAP JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
 
     <!-- MY SCRIPT -->
     <script src="./JS/script.js"></script>
