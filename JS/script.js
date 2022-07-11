@@ -210,8 +210,11 @@ const app = new Vue(
             },
 
             searchContact() {
+
+                const lowercaseSearchedWord = this.searchBar.toLowerCase();
+                
                 for (let i = 0; i < this.contacts.length; i++) {
-                    const lowercaseSearchedWord = this.searchBar.toLowerCase();
+                   
                     const lowercaseContactName = this.contacts[i].name.toLowerCase();
 
                     if(lowercaseSearchedWord === ""){
@@ -227,8 +230,8 @@ const app = new Vue(
                 console.log(this.searchContact)
             },
 
-            deleteMessage(messageToDelete){
-                this.contacts[this.currentSelectedChat].messages.splice(this.contacts[this.currentSelectedChat].messages.indexOf(messageToDelete), 1);
+            deleteMessage(indexToDelete){
+                this.contacts[this.currentSelectedChat].messages.splice(indexToDelete, 1);
             },
 
             pinMessage(indexOf){

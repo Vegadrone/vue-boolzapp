@@ -70,13 +70,13 @@ li,
     margin: 20px;
 }
 
-.message-sent {
+.sent {
     background-color: #bfee90;
     position: relative;
     left: 440px;
 }
 
-.message-received {
+.received {
     background-color: #fbf2f2;
 }
 

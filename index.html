@@ -62,13 +62,12 @@
                             <div class="col-12 col-lg-12 col-md-12 g-0">
                                 <ul class="list-group">
                                     <li class="list-group-item list-group-item-action py-4 d-flex"
-                                        v-for="(contact,index) in contacts" @click="chatSelection(index)">
+                                        v-for="(contact,index) in contacts" v-if="contact.visible" @click="chatSelection(index)">
                                         <div class="avatar-container">
                                             <img class="avatar" :src="getImgFullPath(index)" :alt="contacts.avatar">
                                         </div>
                                         <div>
-                                            <span class="fs-5" :class="{'display':contacts[currentSelectedChat].visible === 'true',
-                                          'display-none':contacts[currentSelectedChat].visible === 'false'}">{{contact.name}}</span>
+                                            <span class="fs-5">{{contact.name}}</span>
                                         </div>
                                     </li>
                                 </ul>
@@ -100,14 +99,12 @@
                                         <div class="message"
                                             v-for="(message, index) in contacts[currentSelectedChat].messages">
                                             <div class="message-baloon"
-                                                :class="{'message-sent':contacts[currentSelectedChat].messages[index].status === 'sent',
-                                            'message-received':contacts[currentSelectedChat].messages[index].status === 'received'}">
+                                                :class="message.status">
                                                 {{message.message}}</div>
-                                            <div :class="{'message-sent':contacts[currentSelectedChat].messages[index].status === 'sent',
-                                            'message-received':contacts[currentSelectedChat].messages[index].status === 'received'}"
+                                            <div :class="message.status"
                                                 class="menù-on-click p-2">
                                                 <span class="dropdown delete"
-                                                    @click="deleteMessage(message)">Cancella</span>
+                                                    @click="deleteMessage(index)">Cancella</span>
                                                 <span class="dropdown pin" @click="pinMessage(index)">Importante</span>
                                             </div>
                                         </div>
