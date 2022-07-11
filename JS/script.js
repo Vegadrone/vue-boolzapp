@@ -178,10 +178,6 @@ const app = new Vue(
 
         methods:{
 
-            consoleLog(...args){
-                console.log(...args);
-            },
-
             getImgFullPath(indexOfContact){
                return './img/avatar' + this.contacts[indexOfContact].avatar + '.jpg';
             },
@@ -228,7 +224,6 @@ const app = new Vue(
                         }
                     }
                 }
-                console.log(this.searchContact)
             },
 
             deleteMessage(indexToDelete){
@@ -242,6 +237,17 @@ const app = new Vue(
                 this.pinnedMessage = newPinnedMessage;
 
             },
+
+            takeLastMessage(){
+                const takeOneMessage = this.contacts[i].messages;
+
+                const takeLastMessage = takeOneMessage[takeOneMessage.length -1];
+
+                const lastMessage = takeLastMessage.message;
+
+                return {lastMessage}
+            }
+            
         }
     }
 )
