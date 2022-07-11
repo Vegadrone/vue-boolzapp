@@ -224,6 +224,7 @@ const app = new Vue(
                         }
                     }
                 }
+                console.log(this.searchContact)
             },
 
             deleteMessage(messageToDelete){

@@ -27,6 +27,14 @@ ul.list-group{
     overflow-y: scroll;
 }
 
+.display{
+    display: block;
+}
+
+.display-none {
+    display: none;
+}
+
 li,
 .dropdown {
     cursor: pointer;
@@ -75,6 +83,12 @@ li,
 .menù-on-click{       
     background-color: #fff;
     width: 100px;
+    margin-top: -20px;
+    margin-left: 25px;
+}
+
+.dropdown:hover{
+    color:red
 }
 
 .avatar-container{
