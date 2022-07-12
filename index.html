@@ -68,8 +68,8 @@
                                             <img class="avatar" :src="getImgFullPath(index)" :alt="contacts.avatar">
                                         </div>
                                         <div>
-                                            <div class="fs-5 ">{{contact.name}}</div>
-                                            <div class="fs-10">{{getLastMessage(index)}}</div>
+                                            <div class="fs-5">{{contact.name}}</div>
+                                            <div class="fs-9 w-80">{{getLastMessage(index)}}</div>
                                         </div>
                                     </li>
                                 </ul>
@@ -100,7 +100,7 @@
                                         <div class="pinned-messages-bar">{{pinnedMessage}}</div>
                                         <div class="message"
                                             v-for="(message, index) in contacts[currentSelectedChat].messages">
-                                            <div class="message-baloon d-flex" :class="message.status">
+                                            <div class="message-baloon d-flex" :class="message.status" v-if="message.message !== '' ">
                                                 <div class="dropdown">
                                                     <a class="dropdown-toggle fs-5 mx-2" id="dropdownMenuButton1"
                                                         data-bs-toggle="dropdown" aria-expanded="false">
