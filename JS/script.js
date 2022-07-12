@@ -254,7 +254,13 @@ const app = new Vue(
 
                 const takeLastMessage = takeMessage[takeMessage.length -1];
 
-                const lastMessage = takeLastMessage.message;
+                let lastMessage = takeLastMessage.message;
+
+                if (this.contacts[index].messages === ""){
+                    this.contacts[this.currentSelectedChat].messages.push({
+                        message: "Nessun messaggio",
+                    })
+                }
 
                 return lastMessage + " " + takeLastMessage.date;
 
