@@ -8,8 +8,6 @@ const app = new Vue(
             newUserMessage: "",
             searchBar:"",
             pinnedMessage: "",
-            selectedMessage:0,
-            
            
             contacts: [
                 {
@@ -188,7 +186,7 @@ const app = new Vue(
 
             addNewMessage(){
                 this.contacts[this.currentSelectedChat].messages.push({
-                    date: Date.now(),
+                    date: this.getDateAndTime(),
                     message: this.newUserMessage,
                     status: 'sent'
                 });
@@ -199,8 +197,9 @@ const app = new Vue(
             },
 
             respondingAI(){
+
                 this.contacts[this.currentSelectedChat].messages.push({
-                    date: Date.now(),
+                    date: this.getDateAndTime(),
                     message: "Ok!",
                     status: 'received'
                 });
@@ -238,16 +237,17 @@ const app = new Vue(
 
             },
 
-            takeLastMessage(){
-                const takeOneMessage = this.contacts[i].messages;
+            getDateAndTime(){
+                const today = new Date();
 
-                const takeLastMessage = takeOneMessage[takeOneMessage.length -1];
+                const date = ` ${today.getDate()}/${(today.getMonth() + 1)}/${today.getFullYear()}`;
+                console.log(date);
 
-                const lastMessage = takeLastMessage.message;
+                const time = `${today.getHours()}:${today.getMinutes()}:${today.getSeconds()}`;
+                console.log(time);
 
-                return {lastMessage}
+                return date + " " + time;
             }
-            
         }
     }
 )
