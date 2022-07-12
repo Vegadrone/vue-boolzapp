@@ -68,8 +68,8 @@
                                             <img class="avatar" :src="getImgFullPath(index)" :alt="contacts.avatar">
                                         </div>
                                         <div>
-                                            <span class="fs-5">{{contact.name}}</span>
-                                            <span  class="fs-5">{{contact.message}}</span>
+                                            <div class="fs-5 ">{{contact.name}}</div>
+                                            <div class="fs-10">{{getLastMessage(index)}}</div>
                                         </div>
                                     </li>
                                 </ul>

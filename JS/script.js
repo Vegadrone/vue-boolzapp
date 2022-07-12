@@ -247,6 +247,17 @@ const app = new Vue(
                 console.log(time);
 
                 return date + " " + time;
+            },
+
+            getLastMessage(index){
+                const takeMessage = this.contacts[index].messages;
+
+                const takeLastMessage = takeMessage[takeMessage.length -1];
+
+                const lastMessage = takeLastMessage.message;
+
+                return lastMessage + " " + takeLastMessage.date;
+
             }
         }
     }
