@@ -256,17 +256,15 @@ const app = new Vue(
                 
                 const lastMessage = takeLastMessage.message;
 
-                if (takeMessage.length == 1) {
+                if (takeMessage.length === 1) {
                     takeMessage.push({
                         date: "",
                         message: "",
                         status: ""
                     })
-                    console.log('l \'array è vuoto');
                 };
 
                 return lastMessage + " " + takeLastMessage.date;
-
             }
         }
     }
